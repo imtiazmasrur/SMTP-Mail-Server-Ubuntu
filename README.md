@@ -35,18 +35,18 @@ root@mail:~# sudo nano /etc/dovecot/dovecot.conf
 
 # line 30 : uncomment
 listen = *, ::
-root@mail:~# vi /etc/dovecot/conf.d/10-auth.conf
+root@mail:~# sudo nano /etc/dovecot/conf.d/10-auth.conf
 
 # line 10 : uncomment and change (allow plain text auth)
 disable_plaintext_auth = no
 
 # line 100 : add
 auth_mechanisms = plain login
-root@mail:~# vi /etc/dovecot/conf.d/10-mail.conf
+root@mail:~# sudo nano /etc/dovecot/conf.d/10-mail.conf
 
 # line 30 : change to Maildir
 mail_location = maildir:~/Maildir
-root@mail:~# vi /etc/dovecot/conf.d/10-master.conf
+root@mail:~# sudo nano /etc/dovecot/conf.d/10-master.conf
 
 # line 110-112 : uncomment and add
   # Postfix smtp-auth
