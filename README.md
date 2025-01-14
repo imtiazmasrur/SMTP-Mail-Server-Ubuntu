@@ -12,7 +12,7 @@ root@mail:~# sudo cp /usr/share/postfix/main.cf.dist /etc/postfix/main.cf
 root@mail:~# sudo nano /etc/postfix/main.cf
 ```
 
-#### 3. Copy all the [main.cf](main.cf) file's content to this file /etc/postfix/main.cf 
+#### 3. Copy all content of the [main.cf](main.cf) file's to this file /etc/postfix/main.cf 
 ```bash
 root@mail:~# sudo cp /usr/share/postfix/main.cf.dist /etc/postfix/main.cf
 root@mail:~# sudo nano /etc/postfix/main.cf
@@ -35,6 +35,7 @@ root@mail:~# sudo nano /etc/dovecot/dovecot.conf
 
 # line 30 : uncomment
 listen = *, ::
+
 root@mail:~# sudo nano /etc/dovecot/conf.d/10-auth.conf
 
 # line 10 : uncomment and change (allow plain text auth)
@@ -42,10 +43,12 @@ disable_plaintext_auth = no
 
 # line 100 : add
 auth_mechanisms = plain login
+
 root@mail:~# sudo nano /etc/dovecot/conf.d/10-mail.conf
 
 # line 30 : change to Maildir
 mail_location = maildir:~/Maildir
+
 root@mail:~# sudo nano /etc/dovecot/conf.d/10-master.conf
 
 # line 110-112 : uncomment and add
